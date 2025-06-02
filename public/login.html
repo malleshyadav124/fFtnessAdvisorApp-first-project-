@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Health & Fitness Advisor</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-logo">
+            <h1>Health & Fitness</h1>
+            <p>Your personal wellness journey starts here</p>
+        </div>
+        
+        <div id="alert-container"></div>
+        
+        <form id="loginForm" class="auth-form">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                <i class="fas fa-phone icon"></i>
+            </div>
+            
+            <div class="form-group">
+                <label for="gmail">Gmail</label>
+                <input type="email" id="gmail" name="gmail" required placeholder="Enter your Gmail">
+                <i class="fas fa-envelope icon"></i>
+            </div>
+            
+            <button type="submit" class="auth-btn">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+            
+            <div class="auth-divider">
+                <span>or continue with</span>
+            </div>
+            
+            <div class="social-login">
+                <a href="#" class="social-btn google">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-btn twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div class="auth-links">
+                <p>Don't have an account? <a href="/register">Register now</a></p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/login.js"></script>
+</body>
+</html> 

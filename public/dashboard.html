@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <div class="logo">
+                    <img src="/images/logo.png" alt="Health Dashboard Logo">
+                    <h1>Health Dashboard</h1>
+                </div>
+                <div class="user-info">
+                    <img src="/images/user-avatar.png" alt="User Avatar" class="user-avatar">
+                    <span id="userName">Loading...</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <div class="nav-category">
+                    <a href="#profile" class="nav-item active">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+                
+                <div class="nav-category">
+                    <a href="#nutrition" class="nav-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>Nutrition</span>
+                    </a>
+                    <div class="sub-nav">
+                        <a href="#meals"><i class="fas fa-utensils"></i> Meals</a>
+                        <a href="#water"><i class="fas fa-tint"></i> Water Intake</a>
+                        <a href="#goals"><i class="fas fa-bullseye"></i> Nutrition Goals</a>
+                    </div>
+                </div>
+                
+                <div class="nav-category">
+                    <a href="#fitness" class="nav-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Fitness</span>
+                    </a>
+                    <div class="sub-nav">
+                        <a href="#workouts"><i class="fas fa-running"></i> Workouts</a>
+                        <a href="#progress"><i class="fas fa-chart-line"></i> Progress</a>
+                        <a href="#exercises"><i class="fas fa-dumbbell"></i> Exercises</a>
+                    </div>
+                </div>
+                
+                <div class="nav-category">
+                    <a href="#health" class="nav-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Health</span>
+                    </a>
+                    <div class="sub-nav">
+                        <a href="#vitals"><i class="fas fa-heart"></i> Vitals</a>
+                        <a href="#sleep"><i class="fas fa-moon"></i> Sleep</a>
+                        <a href="#stress"><i class="fas fa-brain"></i> Stress</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="header-right">
+                <button id="logout" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="profile-section">
+                <div class="section-header">
+                    <img src="/images/profile-icon.png" alt="Profile Icon" class="section-icon">
+                    <h2>Profile Information</h2>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <img src="/images/age-icon.png" alt="Age Icon">
+                            <div>
+                                <span class="stat-label">Age</span>
+                                <span id="userAge" class="stat-value">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <img src="/images/bmi-icon.png" alt="BMI Icon">
+                            <div>
+                                <span class="stat-label">BMI</span>
+                                <span id="userBMI" class="stat-value">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nutrition-section">
+                <div class="section-header">
+                    <img src="/images/nutrition-icon.png" alt="Nutrition Icon" class="section-icon">
+                    <h2>Today's Nutrition</h2>
+                </div>
+                <div class="nutrition-card">
+                    <div class="nutrition-item">
+                        <img src="/images/calories-icon.png" alt="Calories Icon">
+                        <div>
+                            <span class="stat-label">Calories</span>
+                            <span id="caloriesConsumed" class="stat-value">0</span>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <img src="/images/protein-icon.png" alt="Protein Icon">
+                        <div>
+                            <span class="stat-label">Protein</span>
+                            <span id="proteinConsumed" class="stat-value">0g</span>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <img src="/images/carbs-icon.png" alt="Carbs Icon">
+                        <div>
+                            <span class="stat-label">Carbs</span>
+                            <span id="carbsConsumed" class="stat-value">0g</span>
+                        </div>
+                    </div>
+                    <div class="nutrition-item">
+                        <img src="/images/fat-icon.png" alt="Fat Icon">
+                        <div>
+                            <span class="stat-label">Fat</span>
+                            <span id="fatConsumed" class="stat-value">0g</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="water-section">
+                <div class="section-header">
+                    <img src="/images/water-icon.png" alt="Water Icon" class="section-icon">
+                    <h2>Water Intake</h2>
+                </div>
+                <div class="water-card">
+                    <div class="water-progress">
+                        <img src="/images/water-bottle.png" alt="Water Bottle" class="water-bottle">
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div id="waterProgress" class="progress"></div>
+                            </div>
+                            <span id="waterIntake" class="water-amount">0 ml</span>
+                        </div>
+                    </div>
+                    <form id="addWaterForm" class="water-form">
+                        <input type="number" name="amount" placeholder="Amount in ml" required>
+                        <button type="submit" class="add-water-btn">
+                            <i class="fas fa-plus"></i>
+                            Add Water
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="goals-section">
+                <div class="section-header">
+                    <img src="/images/goals-icon.png" alt="Goals Icon" class="section-icon">
+                    <h2>Goals</h2>
+                </div>
+                <div class="goals-card">
+                    <form id="addGoalForm" class="goal-form">
+                        <input type="text" name="goal" placeholder="Enter your goal" required>
+                        <button type="submit" class="add-goal-btn">
+                            <i class="fas fa-plus"></i>
+                            Add Goal
+                        </button>
+                    </form>
+                    <div id="goalsList" class="goals-list">
+                        <!-- Goals will be added here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html> 

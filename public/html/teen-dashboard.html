@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen Health & Fitness Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/teen-dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome, <span id="userName">Teen</span>!</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+        
+        <main>
+            <section class="profile-section">
+                <h2>Your Profile</h2>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> <span id="profileName">-</span></p>
+                    <p><strong>Age:</strong> <span id="profileAge">-</span></p>
+                    <p><strong>Gmail:</strong> <span id="profileGmail">-</span></p>
+                </div>
+            </section>
+
+            <section class="health-section">
+                <h2>Health Overview</h2>
+                <div class="health-stats">
+                    <div class="stat-card">
+                        <h3>Weight</h3>
+                        <p id="weight">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Height</h3>
+                        <p id="height">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>BMI</h3>
+                        <p id="bmi">-</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="goals-section">
+                <h2>Your Goals</h2>
+                <div class="goals-list" id="goalsList">
+                    <!-- Goals will be added here dynamically -->
+                </div>
+                <button id="addGoalBtn" class="add-goal-btn">Add New Goal</button>
+            </section>
+
+            <section class="resources-section">
+                <h2>Teen Health Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>Nutrition Guide</h3>
+                        <p>Learn about healthy eating habits for teenagers</p>
+                        <button class="resource-btn">View Guide</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Exercise Tips</h3>
+                        <p>Safe and effective workouts for teens</p>
+                        <button class="resource-btn">View Tips</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Mental Health</h3>
+                        <p>Resources for managing stress and anxiety</p>
+                        <button class="resource-btn">Learn More</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Sleep Guide</h3>
+                        <p>Tips for better sleep and rest</p>
+                        <button class="resource-btn">View Guide</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/teen-dashboard.js"></script>
+</body>
+</html> 

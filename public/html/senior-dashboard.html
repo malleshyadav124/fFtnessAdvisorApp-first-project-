@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthTrackHub - Senior Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="dashboard-nav">
+            <div class="brand">
+                <h1>HealthTrackHub</h1>
+                <p>Senior Dashboard</p>
+            </div>
+            <div class="nav-links">
+                <a href="#profile">Profile</a>
+                <a href="#goals">Goals</a>
+                <a href="#progress">Progress</a>
+                <a href="#exercises">Exercises</a>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <section id="welcome">
+                <h2>Welcome to Your Senior Health Dashboard</h2>
+                <p>Track your health journey and stay active!</p>
+            </section>
+
+            <section id="health-stats">
+                <h3>Your Health Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>Daily Steps</h4>
+                        <p class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Exercise Minutes</h4>
+                        <p class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Heart Rate</h4>
+                        <p class="stat-value">0 BPM</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recommended">
+                <h3>Recommended Activities</h3>
+                <div class="activity-list">
+                    <div class="activity-card">
+                        <h4>Walking</h4>
+                        <p>30 minutes of gentle walking</p>
+                    </div>
+                    <div class="activity-card">
+                        <h4>Stretching</h4>
+                        <p>15 minutes of morning stretches</p>
+                    </div>
+                    <div class="activity-card">
+                        <h4>Balance Exercises</h4>
+                        <p>10 minutes of balance training</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html> 

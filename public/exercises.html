@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Tutorials - Health & Fitness Advisor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/exercises.css">
+</head>
+<body>
+    <div class="exercises-container">
+        <div class="exercise-header">
+            <h1>Exercise Tutorials</h1>
+            <p>Browse through our collection of exercise tutorials to find the perfect workout for you.</p>
+        </div>
+
+        <div class="exercise-filters">
+            <button class="filter-btn active" data-filter="all">All Exercises</button>
+            <button class="filter-btn" data-filter="strength">Strength Training</button>
+            <button class="filter-btn" data-filter="cardio">Cardio</button>
+            <button class="filter-btn" data-filter="flexibility">Flexibility</button>
+            <button class="filter-btn" data-filter="beginner">Beginner</button>
+            <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+            <button class="filter-btn" data-filter="advanced">Advanced</button>
+        </div>
+
+        <div class="exercise-grid" id="exerciseGrid">
+            <!-- Exercise cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Exercise Modal -->
+    <div class="exercise-modal" id="exerciseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="modal-close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video-container">
+                    <video id="modalVideo" class="modal-video" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="modal-info">
+                    <div class="exercise-difficulty" id="modalDifficulty"></div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <h3>Steps to Follow:</h3>
+                    <ol class="modal-steps" id="modalSteps"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/exercises.js"></script>
+</body>
+</html> 

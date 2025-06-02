@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Fitness App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <button class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="/images/logo.png" alt="Logo" class="sidebar-logo">
+            <h1 class="sidebar-title">Health & Fitness</h1>
+            <p class="sidebar-subtitle">Your Wellness Journey</p>
+        </div>
+
+        <div class="user-profile">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-info">
+                <div class="user-name" id="sidebarUserName">Loading...</div>
+                <div class="user-role">Member</div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h2 class="sidebar-section-title">Main Menu</h2>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="/dashboard" class="sidebar-link" data-page="dashboard">
+                        <i class="fas fa-home sidebar-icon"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/nutrition" class="sidebar-link" data-page="nutrition">
+                        <i class="fas fa-utensils sidebar-icon"></i>
+                        <span>Nutrition</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/exercises" class="sidebar-link" data-page="exercises">
+                        <i class="fas fa-dumbbell sidebar-icon"></i>
+                        <span>Exercises</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/goals" class="sidebar-link" data-page="goals">
+                        <i class="fas fa-bullseye sidebar-icon"></i>
+                        <span>Goals</span>
+                        <span class="sidebar-badge" id="activeGoalsBadge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h2 class="sidebar-section-title">Progress</h2>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="/progress" class="sidebar-link" data-page="progress">
+                        <i class="fas fa-chart-line sidebar-icon"></i>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/tutorials" class="sidebar-link" data-page="tutorials">
+                        <i class="fas fa-video sidebar-icon"></i>
+                        <span>Tutorials</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h2 class="sidebar-section-title">Account</h2>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="/profile" class="sidebar-link" data-page="profile">
+                        <i class="fas fa-user-cog sidebar-icon"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt sidebar-icon"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- Dynamic content will be loaded here -->
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+</html> 

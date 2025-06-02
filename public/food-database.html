@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Database - Health & Fitness Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/food-database.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Food Database</h1>
+            <div class="search-container">
+                <input type="text" id="foodSearch" placeholder="Search for foods...">
+                <i class="fas fa-search"></i>
+            </div>
+        </header>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="breakfast">Breakfast</button>
+            <button class="category-btn" data-category="lunch">Lunch</button>
+            <button class="category-btn" data-category="dinner">Dinner</button>
+            <button class="category-btn" data-category="snacks">Snacks</button>
+        </div>
+
+        <div id="foodGrid" class="food-grid">
+            <!-- Food cards will be dynamically inserted here -->
+        </div>
+
+        <button id="backToDashboard" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </button>
+    </div>
+
+    <!-- Food Details Modal -->
+    <div id="foodDetailsModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modalFoodImage" src="" alt="" class="modal-food-image">
+                <h2 id="modalFoodName"></h2>
+                <div class="nutrition-details">
+                    <div class="nutrition-item">
+                        <i class="fas fa-fire"></i>
+                        <span>Calories: <span id="modalCalories"></span> cal</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <span>Protein: <span id="modalProtein"></span>g</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <i class="fas fa-bread-slice"></i>
+                        <span>Carbs: <span id="modalCarbs"></span>g</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <i class="fas fa-oil-can"></i>
+                        <span>Fat: <span id="modalFat"></span>g</span>
+                    </div>
+                </div>
+                <button class="add-to-meal-btn">
+                    <i class="fas fa-plus"></i> Add to Meal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/food-database.js"></script>
+</body>
+</html> 

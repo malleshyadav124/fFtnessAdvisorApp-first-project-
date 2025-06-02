@@ -1,0 +1,70 @@
+.water-section {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.water-tracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.water-tracker p {
+    font-size: 1.2em;
+    color: #00796b;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #4fc3f7 0%, #0288d1 100%);
+    transition: width 0.3s ease;
+}
+
+#addWaterForm {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#addWaterForm input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #b2ebf2;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+#addWaterForm button {
+    padding: 10px 20px;
+    background: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#addWaterForm button:hover {
+    background: #0277bd;
+}
+
+.water-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+} 

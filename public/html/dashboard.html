@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <script>
+        const token = localStorage.getItem('token');
+        if (!token) {
+          window.location.href = '/'; // redirect to login if not logged in
+        }
+      </script>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Fitness Advisor - Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/water-module.css">
+    <link rel="stylesheet" href="../css/nutrition-module.css">
+    <link rel="stylesheet" href="../css/goals-module.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome, <span id="userName">User</span>!</h1>
+            <button id="logout" class="logout-btn">Logout</button>
+        </header>
+        
+        <main>
+            <section class="profile-section">
+                <h2><i class="fas fa-user-circle"></i> Your Profile</h2>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> <span id="userName">-</span></p>
+                    <p><strong>Age:</strong> <span id="userAge">-</span></p>
+                    <p><strong>BMI:</strong> <span id="userBMI">-</span></p>
+                </div>
+            </section>
+
+            <section class="nutrition-section">
+                <h2><i class="fas fa-utensils"></i> Today's Nutrition</h2>
+                <div class="nutrition-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-fire nutrition-icon calories-icon"></i>
+                        <h3>Calories</h3>
+                        <p id="caloriesConsumed">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-drumstick-bite nutrition-icon protein-icon"></i>
+                        <h3>Protein</h3>
+                        <p id="proteinConsumed">0g</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-bread-slice nutrition-icon carbs-icon"></i>
+                        <h3>Carbs</h3>
+                        <p id="carbsConsumed">0g</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-oil-can nutrition-icon fat-icon"></i>
+                        <h3>Fat</h3>
+                        <p id="fatConsumed">0g</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="water-section">
+                <h2><i class="fas fa-tint water-icon"></i> Water Intake</h2>
+                <div class="water-tracker">
+                    <p>Today's intake: <span id="waterIntake">0 ml</span></p>
+                    <div class="progress-bar">
+                        <div id="waterProgress" class="progress" style="width: 0%"></div>
+                    </div>
+                    <form id="addWaterForm">
+                        <input type="number" name="amount" placeholder="Amount in ml" required>
+                        <button type="submit"><i class="fas fa-plus"></i> Add Water</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="goals-section">
+                <h2><i class="fas fa-bullseye goal-icon"></i> Your Goals</h2>
+                <div id="goalsList">
+                    <!-- Goals will be added here dynamically -->
+                </div>
+                <form id="addGoalForm">
+                    <input type="text" name="goal" placeholder="Enter your goal" required>
+                    <button type="submit"><i class="fas fa-plus"></i> Add Goal</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html> 

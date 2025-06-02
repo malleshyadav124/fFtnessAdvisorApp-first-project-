@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Health & Fitness Advisor</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-logo">
+            <h1>Join Health & Fitness</h1>
+            <p>Start your wellness journey today</p>
+        </div>
+        
+        <div id="alert-container"></div>
+        
+        <form id="registerForm" class="auth-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                <i class="fas fa-user icon"></i>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                <i class="fas fa-phone icon"></i>
+            </div>
+            
+            <div class="form-group">
+                <label for="gmail">Gmail</label>
+                <input type="email" id="gmail" name="gmail" required placeholder="Enter your Gmail">
+                <i class="fas fa-envelope icon"></i>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required placeholder="Enter your age">
+                <i class="fas fa-birthday-cake icon"></i>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Create a password">
+                <i class="fas fa-lock icon"></i>
+            </div>
+            
+            <button type="submit" class="auth-btn">
+                <i class="fas fa-user-plus"></i> Register
+            </button>
+            
+            <div class="auth-divider">
+                <span>or register with</span>
+            </div>
+            
+            <div class="social-login">
+                <a href="#" class="social-btn google">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-btn twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div class="auth-links">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/register.js"></script>
+</body>
+</html> 

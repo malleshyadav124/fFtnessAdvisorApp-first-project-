@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Dashboard - Health & Fitness Advisor</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nutrition Dashboard</h1>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="nutrition.html" class="active">Nutrition</a>
+                <a href="exercise.html">Exercise</a>
+                <a href="profile.html">Profile</a>
+                <button id="logout-btn">Logout</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="nutrition-goals">
+                <h2>Set Nutrition Goals</h2>
+                <form id="nutrition-goals-form">
+                    <div class="form-group">
+                        <label for="calories">Daily Calories (kcal)</label>
+                        <input type="number" id="calories" name="calories" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="protein">Daily Protein (g)</label>
+                        <input type="number" id="protein" name="protein" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="carbs">Daily Carbs (g)</label>
+                        <input type="number" id="carbs" name="carbs" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fat">Daily Fat (g)</label>
+                        <input type="number" id="fat" name="fat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="waterGoal">Daily Water Goal (ml)</label>
+                        <input type="number" id="waterGoal" name="waterGoal" required>
+                    </div>
+                    <button type="submit">Set Goals</button>
+                </form>
+                <div id="nutrition-goals"></div>
+            </section>
+
+            <section class="meal-tracking">
+                <h2>Add Meal</h2>
+                <form id="add-meal-form">
+                    <div class="form-group">
+                        <label for="foodName">Food Name</label>
+                        <input type="text" id="foodName" name="foodName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="calories">Calories (kcal)</label>
+                        <input type="number" id="calories" name="calories" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="protein">Protein (g)</label>
+                        <input type="number" id="protein" name="protein" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="carbs">Carbs (g)</label>
+                        <input type="number" id="carbs" name="carbs" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fat">Fat (g)</label>
+                        <input type="number" id="fat" name="fat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servingSize">Serving Size</label>
+                        <input type="number" id="servingSize" name="servingSize" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servingUnit">Serving Unit</label>
+                        <select id="servingUnit" name="servingUnit" required>
+                            <option value="g">grams (g)</option>
+                            <option value="ml">milliliters (ml)</option>
+                            <option value="oz">ounces (oz)</option>
+                            <option value="cup">cups</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mealType">Meal Type</label>
+                        <select id="mealType" name="mealType" required>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snack">Snack</option>
+                        </select>
+                    </div>
+                    <button type="submit">Add Meal</button>
+                </form>
+            </section>
+
+            <section class="water-tracking">
+                <h2>Water Intake</h2>
+                <form id="water-intake-form">
+                    <div class="form-group">
+                        <label for="waterAmount">Amount (ml)</label>
+                        <input type="number" id="waterAmount" name="waterAmount" required>
+                    </div>
+                    <button type="submit">Add Water</button>
+                </form>
+                <div id="water-intake"></div>
+            </section>
+
+            <section class="today-meals">
+                <h2>Today's Meals</h2>
+                <div id="today-meals"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/nutrition.js"></script>
+</body>
+</html> 
