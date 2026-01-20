@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fitness-advisor
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    plan: free
+    runtime: node
+    nodeVersion: 18.x
